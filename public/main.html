@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Edwin Mambo">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+  <meta name="description"
+    content="A small web app to simulate usage of household utilities">
+  <title>Utilities</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Utility Meter</h1>
+  </header>
+
+  <main class="main">
+    <div class="filter-btn-container">
+      <button class="filter-btn active" data-filter="today">today</button>
+      <button class="filter-btn" data-filter="day">day</button>
+      <button class="filter-btn" data-filter="month">month</button>
+      <!-- <button class="filter-btn" data-filter="name">name</button> -->
+      <ul id="utility" class="hidden">
+        <button data-utility="gas">gas</button>
+        <button data-utility="electricity">electricity</button>
+        <button data-utility="water">water</button>
+      </ul>
+    </div>
+
+    <section>
+      <!-- day data -->
+      <div data-filter="day" class="day hidden">
+        <ul>
+          <h3>Sep 23, 2020</h3>
+          <li>
+            <p>Gas Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+
+            <p>Electricity Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+
+            <p>Water Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+          </li>
+        </ul>
+
+        <ul>
+          <h3>Sep 22, 2020</h3>
+          <li>
+            <p>Gas Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+
+            <p>Electricity Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+
+            <p>Water Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+          </li>
+        </ul>
+
+        <ul>
+          <h3>Sep 21, 2020</h3>
+          <li>
+            <p>Gas Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+
+            <p>Electricity Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+
+            <p>Water Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+          </li>
+        </ul>
+
+        <ul>
+          <h3>Sep 20, 2020</h3>
+          <li>
+            <p>Gas Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+
+            <p>Electricity Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+
+            <p>Water Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+          </li>
+        </ul>
+
+        <ul>
+          <h3>Sep 19, 2020</h3>
+          <li>
+            <p>Gas Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+
+            <p>Electricity Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+
+            <p>Water Usage: </p>
+            <meter min="0" max="100" value="30"></meter>
+            <span>30</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- month data -->
+      <div data-filter="month" class="month hidden">
+        <h3>Monthly Usage</h3>
+        <ul>
+          <h4>January</h4>
+          <li>Gas: 1</li>
+          <li>Electricity: 1</li>
+          <li>Water: 1</li>
+        </ul>
+
+        <ul>
+          <h4>February</h4>
+          <li>Gas: 1</li>
+          <li>Electricity: 1</li>
+          <li>Water: 1</li>
+        </ul>
+      </div>
+    </section>
+
+    <section data-filter="gas">
+      <!-- today's data -->
+      <div data-filter="today" class="today">
+        <h2>Gas</h2>
+        <p>Today's Gas Usage: <span class="daily-estimate">100</span> Cubic
+          Metres</p>
+        <p>Estimated Time Remaining: <span class="time-remaining">__</span> days
+        </p>
+      </div>
+    </section>
+    <section data-filter="electricity">
+      <div data-filter="today" class="today">
+        <h2>Electricity</h2>
+        <p>Today's Electricity Usage: <span class="daily-estimate">100</span>
+          kWh
+        </p>
+      </div>
+    </section>
+    <section data-filter="water">
+      <div data-filter="today" class="today">
+        <h2>Water</h2>
+        <p>Today's Water Usage: <span class="daily-estimate">100</span> Litres
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.21.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.21.0/firebase-analytics.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+</body>
+</html>
